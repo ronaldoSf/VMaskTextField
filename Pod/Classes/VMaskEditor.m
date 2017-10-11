@@ -37,7 +37,7 @@
     for (int i = 0; i < currentTextDigited.length; i++) {
         unichar  currentCharMask = [mask characterAtIndex:i];
         unichar  currentChar = [currentTextDigited characterAtIndex:i];
-        if (isnumber(currentChar) && currentCharMask == '#') {
+        if ( (isnumber(currentChar) || isalpha(currentChar)) && currentCharMask == '#') {
             [returnText appendString:[NSString stringWithFormat:@"%c",currentChar]];
         }else{
             if (currentCharMask == '#') {
